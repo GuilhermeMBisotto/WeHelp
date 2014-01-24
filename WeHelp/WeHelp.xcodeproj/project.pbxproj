@@ -81,6 +81,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		075CE62118928F0400563BE3 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 		E42A691718928D2500AE8136 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +121,7 @@
 		E42A692918928D2500AE8136 /* WeHelp */ = {
 			isa = PBXGroup;
 			children = (
+				075CE62118928F0400563BE3 /* iPad */,
 				E42A693218928D2500AE8136 /* AppDelegate.h */,
 				E42A693318928D2500AE8136 /* AppDelegate.m */,
 				E42A693518928D2500AE8136 /* Main_iPhone.storyboard */,
@@ -395,7 +403,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeHelp/WeHelp-Prefix.pch";
 				INFOPLIST_FILE = "WeHelp/WeHelp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -408,7 +418,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeHelp/WeHelp-Prefix.pch";
 				INFOPLIST_FILE = "WeHelp/WeHelp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -474,6 +486,7 @@
 				E42A695718928D2500AE8136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E42A695818928D2500AE8136 /* Build configuration list for PBXNativeTarget "WeHelpTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +495,7 @@
 				E42A695A18928D2500AE8136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

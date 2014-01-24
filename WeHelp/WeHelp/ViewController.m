@@ -9,15 +9,22 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *oi;
 
 @end
 
 @implementation ViewController
+- (IBAction)heu:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"alert" message:@"Tudo Puto" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:@"Cancel", nil];
+    [alert show];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
