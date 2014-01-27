@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0EFE6318967F6800ABF698 /* Instituicao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EFE6218967F6800ABF698 /* Instituicao.m */; };
+		7C0EFE681896802100ABF698 /* ListaInstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EFE671896802100ABF698 /* ListaInstTableViewController.m */; };
 		E42A692418928D2500AE8136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692318928D2500AE8136 /* Foundation.framework */; };
 		E42A692618928D2500AE8136 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692518928D2500AE8136 /* CoreGraphics.framework */; };
 		E42A692818928D2500AE8136 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692718928D2500AE8136 /* UIKit.framework */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C0EFE6118967F6800ABF698 /* Instituicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instituicao.h; sourceTree = "<group>"; };
+		7C0EFE6218967F6800ABF698 /* Instituicao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instituicao.m; sourceTree = "<group>"; };
+		7C0EFE661896802100ABF698 /* ListaInstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaInstTableViewController.h; sourceTree = "<group>"; };
+		7C0EFE671896802100ABF698 /* ListaInstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaInstTableViewController.m; sourceTree = "<group>"; };
 		E42A692018928D2500AE8136 /* WeHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42A692318928D2500AE8136 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E42A692518928D2500AE8136 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,6 +94,32 @@
 			name = iPad;
 			sourceTree = "<group>";
 		};
+		7C0EFE6018967EB000ABF698 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7C0EFE6118967F6800ABF698 /* Instituicao.h */,
+				7C0EFE6218967F6800ABF698 /* Instituicao.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7C0EFE6418967FDE00ABF698 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7C0EFE6518967FE700ABF698 /* TableListagemInstituicoes */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		7C0EFE6518967FE700ABF698 /* TableListagemInstituicoes */ = {
+			isa = PBXGroup;
+			children = (
+				7C0EFE661896802100ABF698 /* ListaInstTableViewController.h */,
+				7C0EFE671896802100ABF698 /* ListaInstTableViewController.m */,
+			);
+			name = TableListagemInstituicoes;
+			sourceTree = "<group>";
+		};
 		E42A691718928D2500AE8136 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +153,8 @@
 		E42A692918928D2500AE8136 /* WeHelp */ = {
 			isa = PBXGroup;
 			children = (
+				7C0EFE6418967FDE00ABF698 /* ViewController */,
+				7C0EFE6018967EB000ABF698 /* Controller */,
 				075CE62118928F0400563BE3 /* iPad */,
 				E42A693218928D2500AE8136 /* AppDelegate.h */,
 				E42A693318928D2500AE8136 /* AppDelegate.m */,
@@ -256,8 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C0EFE6318967F6800ABF698 /* Instituicao.m in Sources */,
 				E42A693D18928D2500AE8136 /* ViewController.m in Sources */,
 				E42A693418928D2500AE8136 /* AppDelegate.m in Sources */,
+				7C0EFE681896802100ABF698 /* ListaInstTableViewController.m in Sources */,
 				E42A693018928D2500AE8136 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
