@@ -103,6 +103,9 @@
                                     <color key="titleColor" red="0.76596084090000005" green="0.777016967" blue="0.79051737879999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="l5f-Dc-M09" kind="push" id="RBz-g4-YmR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owf-pl-kW3">
                                 <rect key="frame" x="185" y="447" width="85" height="30"/>
@@ -130,7 +133,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-33" y="-100"/>
+            <point key="canvasLocation" x="-311" y="-708"/>
         </scene>
         <!--Lista Inst Table View Controller - Instituições-->
         <scene sceneID="RCZ-Y5-Ipi">
@@ -186,7 +189,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lx9-Fc-Eag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="480" y="-100"/>
+            <point key="canvasLocation" x="186" y="-708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bXb-bG-0gX">
@@ -204,7 +207,58 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22e-iX-M0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-518" y="-100"/>
+            <point key="canvasLocation" x="-812" y="-708"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2Qc-3m-x4Y">
+            <objects>
+                <viewController id="l5f-Dc-M09" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KBv-R9-iwR"/>
+                        <viewControllerLayoutGuide type="bottom" id="mqg-ZU-ZQv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fvm-sL-sZ2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="hnN-U6-DIJ">
+                                <rect key="frame" x="16" y="46" width="289" height="304"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entre em contato com a equipe por email ou telefone para agendaro-mos uma visita à sua instituição." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="1RT-Wu-Msp">
+                                <rect key="frame" x="20" y="301" width="280" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0c-00-4pJ">
+                                <rect key="frame" x="97" y="455" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="(51) 33332222">
+                                    <color key="titleColor" red="0.054901960784313725" green="0.66666666666666663" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1Z-xW-Ne2">
+                                <rect key="frame" x="0.0" y="513" width="320" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.054901960784313725" green="0.66666666666666663" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Entre em contato com a equipe">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zFF-1e-dTI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4gu-Ke-rKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-593" y="69"/>
         </scene>
     </scenes>
     <resources>
