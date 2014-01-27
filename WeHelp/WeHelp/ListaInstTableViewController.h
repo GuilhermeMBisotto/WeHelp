@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Instituicao.h"
 @interface ListaInstTableViewController : UITableViewController
-
+@property Instituicao *inst;
+@property NSMutableArray *listaInst;
 @end

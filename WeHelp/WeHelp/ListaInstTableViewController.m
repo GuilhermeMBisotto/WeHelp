@@ -7,13 +7,7 @@
 //
 
 #import "ListaInstTableViewController.h"
-#import "Instituicao.h"
-
 @interface ListaInstTableViewController ()
-
-@property Instituicao *inst;
-@property NSMutableArray *listaInst;
-
 @property int quantInst;
 @end
 
@@ -32,6 +26,7 @@
 {
     [super viewDidLoad];
     self.inst = [[Instituicao alloc]init];
+    self.listaInst = [[NSMutableArray alloc]init];
     [self CarregaImagens];
 }
 
@@ -59,6 +54,7 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
+    NSLog(@"Quantidade: %ld",self.listaInst.count);
     return self.listaInst.count;
 }
 
@@ -71,7 +67,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"CellInstituicao";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     cell.imageView.image = [[self.listaInst objectAtIndex:indexPath.row]imagem];
