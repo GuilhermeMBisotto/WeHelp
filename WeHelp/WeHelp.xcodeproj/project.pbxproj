@@ -129,6 +129,8 @@
 			children = (
 				075CE62118928F0400563BE3 /* iPad */,
 				E42A693218928D2500AE8136 /* AppDelegate.h */,
+				07ABAE11189679B900902FE2 /* logo2.png */,
+				07ABAE131896820000902FE2 /* separador.png */,
 				E42A693318928D2500AE8136 /* AppDelegate.m */,
 				E42A693518928D2500AE8136 /* Main_iPhone.storyboard */,
 				3EAB479A18967C480038C5BF /* TableViewController.h */,
@@ -217,6 +219,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				TargetAttributes = {
+					E42A694318928D2500AE8136 = {
+						TestTargetID = E42A691F18928D2500AE8136;
+					};
+				};
 			};
 			buildConfigurationList = E42A691B18928D2500AE8136 /* Build configuration list for PBXProject "WeHelp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -245,6 +252,7 @@
 				E42A693A18928D2500AE8136 /* Main_iPad.storyboard in Resources */,
 				3EAB4799189674D10038C5BF /* SuperNova.jpg in Resources */,
 				E42A693F18928D2500AE8136 /* Images.xcassets in Resources */,
+				07ABAE141896820000902FE2 /* separador.png in Resources */,
 				E42A693718928D2500AE8136 /* Main_iPhone.storyboard in Resources */,
 				E42A692E18928D2500AE8136 /* InfoPlist.strings in Resources */,
 			);
@@ -434,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WeHelp.app/WeHelp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -448,6 +457,7 @@
 				INFOPLIST_FILE = "WeHelpTests/WeHelpTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -456,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WeHelp.app/WeHelp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -466,6 +477,7 @@
 				INFOPLIST_FILE = "WeHelpTests/WeHelpTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
