@@ -14,9 +14,8 @@
 
 @implementation TableViewController
 {
-    NSMutableArray *valores;
+    NSArray *valores;
 }
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -29,12 +28,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSArray *auxValores = [[NSMutableArray alloc] init];
+    auxValores= @[@"R$5,00", @"R$10,00", @"R$15,00", @"R$20,00", @"R$25,00", @"R$30,00", @"R$35,00", @"R$40,00", @"R$45,00", @"R$50,00", @"R$55,00", @"R$60,00", @"R$65,00", @"R$70,00", @"R$75,00", @"R$80,00", @"R$85,00", @"R$90,00", @"R$95,00", @"R$100,00"];
+    valores = auxValores;
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,27 +42,29 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
-}
+}*/
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return valores.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    UILabel *lblTitle = (UILabel *)[cell viewWithTag:90000];
     
+    lblTitle.text = [valores objectAtIndex:indexPath.row];
+    cell.tag = indexPath.row+1;
     return cell;
 }
 
