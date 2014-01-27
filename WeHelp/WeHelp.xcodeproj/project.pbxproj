@@ -94,6 +94,7 @@
 		075CE62118928F0400563BE3 /* iPad */ = {
 			isa = PBXGroup;
 			children = (
+				3EAB4798189674D10038C5BF /* SuperNova.jpg */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -165,6 +166,8 @@
 				7C0EFE6A1896893F00ABF698 /* logo2.png */,
 				7C0EFE6B1896893F00ABF698 /* separador.png */,
 				E42A693518928D2500AE8136 /* Main_iPhone.storyboard */,
+				3EAB479A18967C480038C5BF /* TableViewController.h */,
+				3EAB479B18967C480038C5BF /* TableViewController.m */,
 				E42A693818928D2500AE8136 /* Main_iPad.storyboard */,
 				E42A693B18928D2500AE8136 /* ViewController.h */,
 				E42A693C18928D2500AE8136 /* ViewController.m */,
@@ -308,6 +311,7 @@
 				E42A693418928D2500AE8136 /* AppDelegate.m in Sources */,
 				7C0EFE681896802100ABF698 /* ListaInstTableViewController.m in Sources */,
 				E42A693018928D2500AE8136 /* main.m in Sources */,
+				3EAB479C18967C480038C5BF /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

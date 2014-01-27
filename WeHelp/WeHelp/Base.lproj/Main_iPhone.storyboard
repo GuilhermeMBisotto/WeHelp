@@ -208,7 +208,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo2.png" width="420" height="420"/>
+        <image name="SuperNova.jpg" width="1600" height="1000"/>
+        <image name="logo2.png" width="16" height="16"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

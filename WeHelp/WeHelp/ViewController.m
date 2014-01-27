@@ -16,6 +16,10 @@
 @end
 
 @implementation ViewController
+- (IBAction)heu:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"alert" message:@"Sauna Hour o/" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:@"Cancel", nil];
+    [alert show];
+}
 
 - (void)viewDidLoad
 {
