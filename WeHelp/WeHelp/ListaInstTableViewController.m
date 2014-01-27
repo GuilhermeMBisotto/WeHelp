@@ -74,6 +74,7 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    cell.imageView.image = [[self.listaInst objectAtIndex:indexPath.row]imagem];
     
     return cell;
 }

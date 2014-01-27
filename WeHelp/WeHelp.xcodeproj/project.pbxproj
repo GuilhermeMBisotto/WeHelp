@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7C0EFE6318967F6800ABF698 /* Instituicao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EFE6218967F6800ABF698 /* Instituicao.m */; };
 		7C0EFE681896802100ABF698 /* ListaInstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EFE671896802100ABF698 /* ListaInstTableViewController.m */; };
+		7C0EFE6C1896893F00ABF698 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0EFE6A1896893F00ABF698 /* logo2.png */; };
+		7C0EFE6D1896893F00ABF698 /* separador.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0EFE6B1896893F00ABF698 /* separador.png */; };
 		E42A692418928D2500AE8136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692318928D2500AE8136 /* Foundation.framework */; };
 		E42A692618928D2500AE8136 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692518928D2500AE8136 /* CoreGraphics.framework */; };
 		E42A692818928D2500AE8136 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692718928D2500AE8136 /* UIKit.framework */; };
@@ -41,6 +43,8 @@
 		7C0EFE6218967F6800ABF698 /* Instituicao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instituicao.m; sourceTree = "<group>"; };
 		7C0EFE661896802100ABF698 /* ListaInstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaInstTableViewController.h; sourceTree = "<group>"; };
 		7C0EFE671896802100ABF698 /* ListaInstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaInstTableViewController.m; sourceTree = "<group>"; };
+		7C0EFE6A1896893F00ABF698 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = ../../../../Downloads/logo2.png; sourceTree = "<group>"; };
+		7C0EFE6B1896893F00ABF698 /* separador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = separador.png; path = ../../../../Downloads/separador.png; sourceTree = "<group>"; };
 		E42A692018928D2500AE8136 /* WeHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42A692318928D2500AE8136 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E42A692518928D2500AE8136 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -157,9 +161,9 @@
 				7C0EFE6018967EB000ABF698 /* Controller */,
 				075CE62118928F0400563BE3 /* iPad */,
 				E42A693218928D2500AE8136 /* AppDelegate.h */,
-				07ABAE11189679B900902FE2 /* logo2.png */,
-				07ABAE131896820000902FE2 /* separador.png */,
 				E42A693318928D2500AE8136 /* AppDelegate.m */,
+				7C0EFE6A1896893F00ABF698 /* logo2.png */,
+				7C0EFE6B1896893F00ABF698 /* separador.png */,
 				E42A693518928D2500AE8136 /* Main_iPhone.storyboard */,
 				E42A693818928D2500AE8136 /* Main_iPad.storyboard */,
 				E42A693B18928D2500AE8136 /* ViewController.h */,
@@ -276,9 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42A693A18928D2500AE8136 /* Main_iPad.storyboard in Resources */,
-				07ABAE12189679B900902FE2 /* logo2.png in Resources */,
+				7C0EFE6C1896893F00ABF698 /* logo2.png in Resources */,
 				E42A693F18928D2500AE8136 /* Images.xcassets in Resources */,
-				07ABAE141896820000902FE2 /* separador.png in Resources */,
+				7C0EFE6D1896893F00ABF698 /* separador.png in Resources */,
 				E42A693718928D2500AE8136 /* Main_iPhone.storyboard in Resources */,
 				E42A692E18928D2500AE8136 /* InfoPlist.strings in Resources */,
 			);
