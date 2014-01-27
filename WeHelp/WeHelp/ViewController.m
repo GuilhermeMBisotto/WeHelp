@@ -7,11 +7,9 @@
 //
 
 #import "ViewController.h"
+#define Rgb2UIColor(r, g, b)[UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *oi;
-@property (weak, nonatomic) IBOutlet UIPickerView *picker;
-
 @end
 
 @implementation ViewController
@@ -24,8 +22,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    
+    UIColor *navColor = [UIColor colorWithRed:((14) / 255.0) green:((170) / 255.0) blue:((237) / 255.0) alpha:1.0];
+    self.navigationController.navigationBar.barTintColor = navColor;
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
