@@ -134,7 +134,7 @@
     switch (indexPath.section){
         case 0:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection0" forIndexPath:indexPath];
-            UICollectionView *clvImages = (UICollectionView *)[cell viewWithTag:1];
+            //UICollectionView *clvImages = (UICollectionView *)[cell viewWithTag:1];
             break;
         }
         case 1:{
