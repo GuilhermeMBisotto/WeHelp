@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		7C0EFE6318967F6800ABF698 /* Instituicao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EFE6218967F6800ABF698 /* Instituicao.m */; };
 		7C0EFE681896802100ABF698 /* ListaInstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EFE671896802100ABF698 /* ListaInstTableViewController.m */; };
-		7C0EFE6C1896893F00ABF698 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0EFE6A1896893F00ABF698 /* logo2.png */; };
-		7C0EFE6D1896893F00ABF698 /* separador.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0EFE6B1896893F00ABF698 /* separador.png */; };
 		E42A692418928D2500AE8136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692318928D2500AE8136 /* Foundation.framework */; };
 		E42A692618928D2500AE8136 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692518928D2500AE8136 /* CoreGraphics.framework */; };
 		E42A692818928D2500AE8136 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692718928D2500AE8136 /* UIKit.framework */; };
@@ -26,6 +24,9 @@
 		E42A694818928D2500AE8136 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692718928D2500AE8136 /* UIKit.framework */; };
 		E42A695018928D2500AE8136 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E42A694E18928D2500AE8136 /* InfoPlist.strings */; };
 		E42A695218928D2500AE8136 /* WeHelpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E42A695118928D2500AE8136 /* WeHelpTests.m */; };
+		E4EFDF07189692F400CC03F8 /* DetalheInstituicaoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EFDF06189692F400CC03F8 /* DetalheInstituicaoTableViewController.m */; };
+		E4EFDF0A189693B900CC03F8 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EFDF08189693B900CC03F8 /* logo2.png */; };
+		E4EFDF0B189693B900CC03F8 /* separador.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EFDF09189693B900CC03F8 /* separador.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +44,6 @@
 		7C0EFE6218967F6800ABF698 /* Instituicao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instituicao.m; sourceTree = "<group>"; };
 		7C0EFE661896802100ABF698 /* ListaInstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaInstTableViewController.h; sourceTree = "<group>"; };
 		7C0EFE671896802100ABF698 /* ListaInstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaInstTableViewController.m; sourceTree = "<group>"; };
-		7C0EFE6A1896893F00ABF698 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = ../../../../Downloads/logo2.png; sourceTree = "<group>"; };
-		7C0EFE6B1896893F00ABF698 /* separador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = separador.png; path = ../../../../Downloads/separador.png; sourceTree = "<group>"; };
 		E42A692018928D2500AE8136 /* WeHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42A692318928D2500AE8136 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E42A692518928D2500AE8136 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,6 +64,10 @@
 		E42A694D18928D2500AE8136 /* WeHelpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeHelpTests-Info.plist"; sourceTree = "<group>"; };
 		E42A694F18928D2500AE8136 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E42A695118928D2500AE8136 /* WeHelpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeHelpTests.m; sourceTree = "<group>"; };
+		E4EFDF05189692F400CC03F8 /* DetalheInstituicaoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalheInstituicaoTableViewController.h; sourceTree = "<group>"; };
+		E4EFDF06189692F400CC03F8 /* DetalheInstituicaoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheInstituicaoTableViewController.m; sourceTree = "<group>"; };
+		E4EFDF08189693B900CC03F8 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = ../logo2.png; sourceTree = "<group>"; };
+		E4EFDF09189693B900CC03F8 /* separador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = separador.png; path = ../separador.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +97,6 @@
 		075CE62118928F0400563BE3 /* iPad */ = {
 			isa = PBXGroup;
 			children = (
-				3EAB4798189674D10038C5BF /* SuperNova.jpg */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -163,11 +165,11 @@
 				075CE62118928F0400563BE3 /* iPad */,
 				E42A693218928D2500AE8136 /* AppDelegate.h */,
 				E42A693318928D2500AE8136 /* AppDelegate.m */,
-				7C0EFE6A1896893F00ABF698 /* logo2.png */,
-				7C0EFE6B1896893F00ABF698 /* separador.png */,
+				E4EFDF08189693B900CC03F8 /* logo2.png */,
+				E4EFDF09189693B900CC03F8 /* separador.png */,
 				E42A693518928D2500AE8136 /* Main_iPhone.storyboard */,
-				3EAB479A18967C480038C5BF /* TableViewController.h */,
-				3EAB479B18967C480038C5BF /* TableViewController.m */,
+				E4EFDF05189692F400CC03F8 /* DetalheInstituicaoTableViewController.h */,
+				E4EFDF06189692F400CC03F8 /* DetalheInstituicaoTableViewController.m */,
 				E42A693818928D2500AE8136 /* Main_iPad.storyboard */,
 				E42A693B18928D2500AE8136 /* ViewController.h */,
 				E42A693C18928D2500AE8136 /* ViewController.m */,
@@ -283,9 +285,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42A693A18928D2500AE8136 /* Main_iPad.storyboard in Resources */,
-				7C0EFE6C1896893F00ABF698 /* logo2.png in Resources */,
+				E4EFDF0B189693B900CC03F8 /* separador.png in Resources */,
 				E42A693F18928D2500AE8136 /* Images.xcassets in Resources */,
-				7C0EFE6D1896893F00ABF698 /* separador.png in Resources */,
+				E4EFDF0A189693B900CC03F8 /* logo2.png in Resources */,
 				E42A693718928D2500AE8136 /* Main_iPhone.storyboard in Resources */,
 				E42A692E18928D2500AE8136 /* InfoPlist.strings in Resources */,
 			);
@@ -308,10 +310,10 @@
 			files = (
 				7C0EFE6318967F6800ABF698 /* Instituicao.m in Sources */,
 				E42A693D18928D2500AE8136 /* ViewController.m in Sources */,
+				E4EFDF07189692F400CC03F8 /* DetalheInstituicaoTableViewController.m in Sources */,
 				E42A693418928D2500AE8136 /* AppDelegate.m in Sources */,
 				7C0EFE681896802100ABF698 /* ListaInstTableViewController.m in Sources */,
 				E42A693018928D2500AE8136 /* main.m in Sources */,
-				3EAB479C18967C480038C5BF /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
