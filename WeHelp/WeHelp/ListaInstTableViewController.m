@@ -31,26 +31,25 @@
     dicSections = [[NSMutableDictionary alloc] init];
     _listaInst = [[NSMutableArray alloc] init];
     
-    self.inst1 = [[Instituicao alloc]init];
-    self.inst2 = [[Instituicao alloc]init];
-    
     [self CarregaImagens];
 }
 
 -(void) CarregaImagens
 {
+    Instituicao *inst1 = [[Instituicao alloc]init];
+    Instituicao *inst2 = [[Instituicao alloc]init];
     
     NSString *nomeImagem = @"logo2.png";
     UIImage *imagemArq1 = [UIImage imageNamed:nomeImagem];
     
-    self.inst1.nome = @"Instituição 1";
-    self.inst1.imagem = imagemArq1;
+    inst1.nome = @"Instituição 1";
+    inst1.imagem = imagemArq1;
     
-    self.inst2.nome = @"Instituição 2";
-    self.inst2.imagem = imagemArq1;
+    inst2.nome = @"Instituição 2";
+    inst2.imagem = imagemArq1;
 
-    [dicSections setObject:self.inst1 forKey:@"Instituicao1"];
-    [dicSections setObject:self.inst2 forKey:@"Instituicao2"];
+    [dicSections setObject:inst1 forKey:@"Instituicao1"];
+    [dicSections setObject:inst2 forKey:@"Instituicao2"];
     
     [self OrdenaInstituicoes];
 }
