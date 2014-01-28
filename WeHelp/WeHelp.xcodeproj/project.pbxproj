@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		074D0B151897CCB400DFCA73 /* fundohome.png in Resources */ = {isa = PBXBuildFile; fileRef = 074D0B141897CCB400DFCA73 /* fundohome.png */; };
+		074D0B181897D75F00DFCA73 /* TypeInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D0B171897D75F00DFCA73 /* TypeInstitutionViewController.m */; };
 		07C3A8A71896937D00326A26 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C3A8A51896937D00326A26 /* logo2.png */; };
 		07C3A8A81896937D00326A26 /* separador.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C3A8A61896937D00326A26 /* separador.png */; };
 		7C0EFE6318967F6800ABF698 /* Instituicao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EFE6218967F6800ABF698 /* Instituicao.m */; };
@@ -39,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		074D0B141897CCB400DFCA73 /* fundohome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fundohome.png; path = ../../../../../Desktop/fundohome.png; sourceTree = "<group>"; };
+		074D0B161897D75F00DFCA73 /* TypeInstitutionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeInstitutionViewController.h; sourceTree = "<group>"; };
+		074D0B171897D75F00DFCA73 /* TypeInstitutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeInstitutionViewController.m; sourceTree = "<group>"; };
 		07C3A8A51896937D00326A26 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = ../../../../../Desktop/logo2.png; sourceTree = "<group>"; };
 		07C3A8A61896937D00326A26 /* separador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = separador.png; path = ../../../../../Desktop/separador.png; sourceTree = "<group>"; };
 		7C0EFE6118967F6800ABF698 /* Instituicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instituicao.h; sourceTree = "<group>"; };
@@ -91,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		074D0B191897D77400DFCA73 /* TypeInstitution */ = {
+			isa = PBXGroup;
+			children = (
+				074D0B161897D75F00DFCA73 /* TypeInstitutionViewController.h */,
+				074D0B171897D75F00DFCA73 /* TypeInstitutionViewController.m */,
+			);
+			name = TypeInstitution;
+			sourceTree = "<group>";
+		};
 		075CE62118928F0400563BE3 /* Iphone */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				07C3A8A51896937D00326A26 /* logo2.png */,
+				074D0B141897CCB400DFCA73 /* fundohome.png */,
 				07C3A8A61896937D00326A26 /* separador.png */,
 			);
 			name = Img;
@@ -119,6 +134,7 @@
 		7C0EFE6418967FDE00ABF698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				074D0B191897D77400DFCA73 /* TypeInstitution */,
 				7C0EFE6518967FE700ABF698 /* TableListagemInstituicoes */,
 			);
 			name = ViewController;
@@ -287,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074D0B151897CCB400DFCA73 /* fundohome.png in Resources */,
 				E42A693A18928D2500AE8136 /* Main_iPad.storyboard in Resources */,
 				07C3A8A71896937D00326A26 /* logo2.png in Resources */,
 				E42A693F18928D2500AE8136 /* Images.xcassets in Resources */,
@@ -312,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C0EFE6318967F6800ABF698 /* Instituicao.m in Sources */,
+				074D0B181897D75F00DFCA73 /* TypeInstitutionViewController.m in Sources */,
 				E42A693D18928D2500AE8136 /* ViewController.m in Sources */,
 				E42A693418928D2500AE8136 /* AppDelegate.m in Sources */,
 				7C0EFE681896802100ABF698 /* ListaInstTableViewController.m in Sources */,

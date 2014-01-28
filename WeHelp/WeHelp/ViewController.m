@@ -27,6 +27,12 @@
 	// Do any additional setup after loading the view, typically from a nib.
     UIColor *navColor = [UIColor colorWithRed:((14) / 255.0) green:((170) / 255.0) blue:((237) / 255.0) alpha:1.0];
     self.navigationController.navigationBar.barTintColor = navColor;
+    
+    NSMutableDictionary *navBarTextAttributes = [NSMutableDictionary dictionaryWithCapacity:1];
+    
+    [navBarTextAttributes setObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName ];
+    
+    self.navigationController.navigationBar.titleTextAttributes = navBarTextAttributes;
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
