@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07C3A8A71896937D00326A26 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C3A8A51896937D00326A26 /* logo2.png */; };
-		07C3A8A81896937D00326A26 /* separador.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C3A8A61896937D00326A26 /* separador.png */; };
+		3E7588361897C4A7002B134D /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7588351897C4A7002B134D /* TableViewController.m */; };
+		3ECD6EF91897C8A900EC8152 /* separador.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECD6EF71897C8A900EC8152 /* separador.png */; };
+		3ECD6EFA1897C8A900EC8152 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECD6EF81897C8A900EC8152 /* logo2.png */; };
 		7C0EFE6318967F6800ABF698 /* Instituicao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EFE6218967F6800ABF698 /* Instituicao.m */; };
 		7C0EFE681896802100ABF698 /* ListaInstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EFE671896802100ABF698 /* ListaInstTableViewController.m */; };
 		E42A692418928D2500AE8136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692318928D2500AE8136 /* Foundation.framework */; };
@@ -39,8 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07C3A8A51896937D00326A26 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = ../../../../../Desktop/logo2.png; sourceTree = "<group>"; };
-		07C3A8A61896937D00326A26 /* separador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = separador.png; path = ../../../../../Desktop/separador.png; sourceTree = "<group>"; };
+		3E7588341897C4A7002B134D /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
+		3E7588351897C4A7002B134D /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
+		3ECD6EF71897C8A900EC8152 /* separador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = separador.png; path = ../../../../Desktop/separador.png; sourceTree = "<group>"; };
+		3ECD6EF81897C8A900EC8152 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = ../../../../Desktop/logo2.png; sourceTree = "<group>"; };
 		7C0EFE6118967F6800ABF698 /* Instituicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instituicao.h; sourceTree = "<group>"; };
 		7C0EFE6218967F6800ABF698 /* Instituicao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instituicao.m; sourceTree = "<group>"; };
 		7C0EFE661896802100ABF698 /* ListaInstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaInstTableViewController.h; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 		075CE62118928F0400563BE3 /* Iphone */ = {
 			isa = PBXGroup;
 			children = (
+				3ECD6EF71897C8A900EC8152 /* separador.png */,
+				3ECD6EF81897C8A900EC8152 /* logo2.png */,
 			);
 			name = Iphone;
 			sourceTree = "<group>";
@@ -101,8 +106,6 @@
 		07C3A8A91896939400326A26 /* Img */ = {
 			isa = PBXGroup;
 			children = (
-				07C3A8A51896937D00326A26 /* logo2.png */,
-				07C3A8A61896937D00326A26 /* separador.png */,
 			);
 			name = Img;
 			sourceTree = "<group>";
@@ -172,6 +175,8 @@
 				075CE62118928F0400563BE3 /* Iphone */,
 				E42A693218928D2500AE8136 /* AppDelegate.h */,
 				E42A693318928D2500AE8136 /* AppDelegate.m */,
+				3E7588341897C4A7002B134D /* TableViewController.h */,
+				3E7588351897C4A7002B134D /* TableViewController.m */,
 				E42A693518928D2500AE8136 /* Main_iPhone.storyboard */,
 				E42A693818928D2500AE8136 /* Main_iPad.storyboard */,
 				E42A693B18928D2500AE8136 /* ViewController.h */,
@@ -287,10 +292,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ECD6EF91897C8A900EC8152 /* separador.png in Resources */,
+				3ECD6EFA1897C8A900EC8152 /* logo2.png in Resources */,
 				E42A693A18928D2500AE8136 /* Main_iPad.storyboard in Resources */,
-				07C3A8A71896937D00326A26 /* logo2.png in Resources */,
 				E42A693F18928D2500AE8136 /* Images.xcassets in Resources */,
-				07C3A8A81896937D00326A26 /* separador.png in Resources */,
 				E42A693718928D2500AE8136 /* Main_iPhone.storyboard in Resources */,
 				E42A692E18928D2500AE8136 /* InfoPlist.strings in Resources */,
 			);
@@ -312,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C0EFE6318967F6800ABF698 /* Instituicao.m in Sources */,
+				3E7588361897C4A7002B134D /* TableViewController.m in Sources */,
 				E42A693D18928D2500AE8136 /* ViewController.m in Sources */,
 				E42A693418928D2500AE8136 /* AppDelegate.m in Sources */,
 				7C0EFE681896802100ABF698 /* ListaInstTableViewController.m in Sources */,
