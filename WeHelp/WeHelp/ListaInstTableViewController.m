@@ -9,7 +9,7 @@
 #import "ListaInstTableViewController.h"
 @interface ListaInstTableViewController ()
 {
-    NSMutableDictionary *dicSections;
+ //   NSMutableDictionary *dicSections;
 }
 @end
 
@@ -28,43 +28,61 @@
 {
     [super viewDidLoad];
     
-    dicSections = [[NSMutableDictionary alloc] init];
-    _listaInst = [[NSMutableArray alloc] init];
+//    dicSections = [[NSMutableDictionary alloc] init];
     
-    [self CarregaImagens];
 }
 
--(void) CarregaImagens
+-(void)viewWillAppear:(BOOL)animated
 {
-    Instituicao *inst1 = [[Instituicao alloc]init];
-    Instituicao *inst2 = [[Instituicao alloc]init];
-    
-    NSString *nomeImagem = @"logo2.png";
-    UIImage *imagemArq1 = [UIImage imageNamed:nomeImagem];
-    
-    inst1.nome = @"Instituição 1";
-    inst1.imagem = imagemArq1;
-    
-    inst2.nome = @"Instituição 2";
-    inst2.imagem = imagemArq1;
-
-    [dicSections setObject:inst1 forKey:@"Instituicao1"];
-    [dicSections setObject:inst2 forKey:@"Instituicao2"];
-    
-    [self OrdenaInstituicoes];
+    [self CarregaInstituicoes];
 }
 
--(void)OrdenaInstituicoes
+-(void) CarregaInstituicoes
 {
-    NSArray *keys = [dicSections allKeys];
-    NSArray *sKeys = [keys sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+    NSMutableArray *listIns = [[NSMutableArray alloc]init];
     
-    for(id k in sKeys) {
-        id val = [dicSections objectForKey:k];
-        [_listaInst addObject:val];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    for(int i = 0; i < _quantInst;i++)
+    {
+        Instituicao *inst = [[Instituicao alloc]init];
+        NSString *keyNome = [NSString stringWithFormat:@"nome%d",i];
+        NSString *keyImagem = [NSString stringWithFormat:@"imagem%d",i];
+        NSString *keyAreaAtuacao = [NSString stringWithFormat:@"areaAtuacao%d",i];
+        NSString *keyEndereco = [NSString stringWithFormat:@"endereco%d",i];
+        NSString *keyTelefone = [NSString stringWithFormat:@"telefone%d",i];
+        
+        NSString *nomeImagem = @"logo2.png";
+        UIImage *imagemArq1 = [UIImage imageNamed:nomeImagem];
+        
+        inst.imagem = imagemArq1;
+        
+        inst.nome = [defaults objectForKey:keyNome];
+        inst.areaAtuacao = [defaults objectForKey:keyAreaAtuacao];
+        inst.endereco = [defaults objectForKey:keyEndereco];
+        inst.telefone = [defaults objectForKey:keyTelefone];
+        
+        [listIns addObject:inst];
     }
-}
+    
+    _listaInstituicoesReceiv = listIns;
+    
+//    Instituicao *inst1 = [[Instituicao alloc]init];
+//    Instituicao *inst2 = [[Instituicao alloc]init];
+//    
+//    NSString *nomeImagem = @"logo2.png";
+//    UIImage *imagemArq1 = [UIImage imageNamed:nomeImagem];
+//    
+//    inst1.nome = @"Instituição 1";
+//    inst1.imagem = imagemArq1;
+//    
+//    inst2.nome = @"Instituição 2";
+//    inst2.imagem = imagemArq1;
 
+//    [dicSections setObject:inst1 forKey:@"Instituicao1"];
+//    [dicSections setObject:inst2 forKey:@"Instituicao2"];
+    
+    
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -82,7 +100,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
-    return _listaInst.count;
+    return _listaInstituicoesReceiv.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -97,9 +115,29 @@
     
     
     UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];
-    imageView.image = [_listaInst[indexPath.row]imagem];
+    imageView.image = [_listaInstituicoesReceiv[indexPath.row]imagem];
+    
     UILabel *labelNomeInst = (UILabel *)[cell viewWithTag:5];
-    labelNomeInst.text = [_listaInst[indexPath.row]nome];
+    labelNomeInst.text = [_listaInstituicoesReceiv[indexPath.row]nome];
+    
+    UILabel *labelAreaAtuacaoInst = (UILabel *)[cell viewWithTag:2];
+    [labelAreaAtuacaoInst setText:[_listaInstituicoesReceiv[indexPath.row]areaAtuacao]];
+
+    UILabel *labelEnderecoInst = (UILabel *)[cell viewWithTag:3];
+    [labelEnderecoInst setText:[_listaInstituicoesReceiv[indexPath.row]endereco]];
+
+    
+    NSLog(@"TELEFONE: %@",[_listaInstituicoesReceiv[indexPath.row]telefone]);
+    
+    
+    UIButton *botaoTelefone = (UIButton *)[cell viewWithTag:4];
+    UILabel *labelButton = [[UILabel alloc]init];
+    labelButton.text = [_listaInstituicoesReceiv[indexPath.row]telefone];
+    
+    [botaoTelefone setTitle:labelButton.text forState:UIControlStateNormal];
+    
+    NSLog(@"TAG: %ld",botaoTelefone.titleLabel.tag);
+    NSLog(@"TEXTO: %@",botaoTelefone.titleLabel.text);
     cell.tag = indexPath.row;
     
     return cell;
@@ -114,6 +152,15 @@
 //{
 //    return dicSections.allKeys[section];
 //}
+
+
+
+
+
+
+
+
+
 
 
 
