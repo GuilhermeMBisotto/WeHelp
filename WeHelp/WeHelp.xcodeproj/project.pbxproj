@@ -24,6 +24,8 @@
 		E42A694818928D2500AE8136 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692718928D2500AE8136 /* UIKit.framework */; };
 		E42A695018928D2500AE8136 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E42A694E18928D2500AE8136 /* InfoPlist.strings */; };
 		E42A695218928D2500AE8136 /* WeHelpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E42A695118928D2500AE8136 /* WeHelpTests.m */; };
+		E46D6BDA1897CD2A00739D1D /* beira1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E46D6BD81897CD2A00739D1D /* beira1.jpg */; };
+		E46D6BDB1897CD2A00739D1D /* beira2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E46D6BD91897CD2A00739D1D /* beira2.jpg */; };
 		E4EFDF07189692F400CC03F8 /* DetalheInstituicaoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EFDF06189692F400CC03F8 /* DetalheInstituicaoTableViewController.m */; };
 		E4EFDF0A189693B900CC03F8 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EFDF08189693B900CC03F8 /* logo2.png */; };
 		E4EFDF0B189693B900CC03F8 /* separador.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EFDF09189693B900CC03F8 /* separador.png */; };
@@ -64,6 +66,8 @@
 		E42A694D18928D2500AE8136 /* WeHelpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeHelpTests-Info.plist"; sourceTree = "<group>"; };
 		E42A694F18928D2500AE8136 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E42A695118928D2500AE8136 /* WeHelpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeHelpTests.m; sourceTree = "<group>"; };
+		E46D6BD81897CD2A00739D1D /* beira1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beira1.jpg; sourceTree = "<group>"; };
+		E46D6BD91897CD2A00739D1D /* beira2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beira2.jpg; sourceTree = "<group>"; };
 		E4EFDF05189692F400CC03F8 /* DetalheInstituicaoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalheInstituicaoTableViewController.h; sourceTree = "<group>"; };
 		E4EFDF06189692F400CC03F8 /* DetalheInstituicaoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheInstituicaoTableViewController.m; sourceTree = "<group>"; };
 		E4EFDF08189693B900CC03F8 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = ../logo2.png; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 				E42A693218928D2500AE8136 /* AppDelegate.h */,
 				E42A693318928D2500AE8136 /* AppDelegate.m */,
 				E4EFDF08189693B900CC03F8 /* logo2.png */,
+				E46D6BD81897CD2A00739D1D /* beira1.jpg */,
+				E46D6BD91897CD2A00739D1D /* beira2.jpg */,
 				E4EFDF09189693B900CC03F8 /* separador.png */,
 				E42A693518928D2500AE8136 /* Main_iPhone.storyboard */,
 				E4EFDF05189692F400CC03F8 /* DetalheInstituicaoTableViewController.h */,
@@ -289,6 +295,8 @@
 				E42A693F18928D2500AE8136 /* Images.xcassets in Resources */,
 				E4EFDF0A189693B900CC03F8 /* logo2.png in Resources */,
 				E42A693718928D2500AE8136 /* Main_iPhone.storyboard in Resources */,
+				E46D6BDA1897CD2A00739D1D /* beira1.jpg in Resources */,
+				E46D6BDB1897CD2A00739D1D /* beira2.jpg in Resources */,
 				E42A692E18928D2500AE8136 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

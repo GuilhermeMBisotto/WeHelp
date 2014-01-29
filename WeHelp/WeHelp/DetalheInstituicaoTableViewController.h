@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetalheInstituicaoTableViewController : UITableViewController
+@interface DetalheInstituicaoTableViewController : UITableViewController <UIScrollViewDelegate>
 
 @end

@@ -13,6 +13,9 @@
 @end
 
 @implementation DetalheInstituicaoTableViewController
+{
+    NSArray *arrayImage;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -25,7 +28,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    arrayImage = [[NSArray alloc]init];
+    UIImage *image1 = [UIImage imageNamed:@"beira1.jpg"];
+    UIImage *image2 = [UIImage imageNamed:@"beira2.jpg"];
     
+    arrayImage = @[image1, image2];
+    
+    
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +60,7 @@
     switch (section){
         case 0:{
             return @"Detalhes";
+            //self.tableView.indexPathForSelectedRow.section
             break;
         }
         case 1:{
@@ -125,17 +141,37 @@
     } return 0;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section==0) {
+        return 249;
+    } else {
+        return tableView.rowHeight;
+    }
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
     
-    
     switch (indexPath.section){
         case 0:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection0" forIndexPath:indexPath];
-            //UICollectionView *clvImages = (UICollectionView *)[cell viewWithTag:1];
+            
+            UIScrollView *scrImage = (UIScrollView *)[cell viewWithTag:1];
+            
+            UIImageView *imageView = (UIImageView *)[scrImage viewWithTag:2];
+            UIImageView *imageView2 = (UIImageView *)[scrImage viewWithTag:3];
+            UIImageView *imageView3 = (UIImageView *)[scrImage viewWithTag:4];
+            UIImageView *imageView4 = (UIImageView *)[scrImage viewWithTag:5];
+            UIImageView *imageView5 = (UIImageView *)[scrImage viewWithTag:6];
+            imageView.image = arrayImage[0];
+            imageView2.image = arrayImage[1];
+            
+            scrImage.contentSize = CGSizeMake((scrImage.frame.size.width+0) * arrayImage.count, scrImage.frame.size.height);
+            
             break;
+        
         }
         case 1:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection1" forIndexPath:indexPath];
@@ -187,24 +223,63 @@
         }
         case 2:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection2" forIndexPath:indexPath];
+            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
+            UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
+            lblSaibaMais.text = @"Saiba mais";
+            lblSaibaMais.adjustsFontSizeToFitWidth = YES;
+            lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader jader jader jader ";
+            
+            break;
+            
         }
         case 3:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection3" forIndexPath:indexPath];
+            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
+            UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
+            lblSaibaMais.text = @"Saiba mais";
+            lblSaibaMais.adjustsFontSizeToFitWidth = YES;
+            lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader jader jader jader ";
+            break;
         }
         case 4:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection4" forIndexPath:indexPath];
+            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
+            UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
+            lblSaibaMais.text = @"Saiba mais";
+            lblSaibaMais.adjustsFontSizeToFitWidth = YES;
+            lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader ";
+            break;
         }
         case 5:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection5" forIndexPath:indexPath];
+            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
+            UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
+            lblSaibaMais.text = @"Saiba mais";
+            lblSaibaMais.adjustsFontSizeToFitWidth = YES;
+            lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader ";
+            break;
         }
         case 6:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection6" forIndexPath:indexPath];
+            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
+            UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
+            lblSaibaMais.text = @"Saiba mais";
+            lblSaibaMais.adjustsFontSizeToFitWidth = YES;
+            lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader ";
+            break;
         }
         case 7:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection7" forIndexPath:indexPath];
+            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
+            UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
+            lblSaibaMais.text = @"Saiba mais";
+            lblSaibaMais.adjustsFontSizeToFitWidth = YES;
+            lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader ";
+            break;
         }
         case 8:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection8" forIndexPath:indexPath];
+            break;
         }
             
             
