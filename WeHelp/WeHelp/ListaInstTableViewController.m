@@ -7,9 +7,11 @@
 //
 
 #import "ListaInstTableViewController.h"
+#import "DetalheInstituicaoTableViewController.h"
 @interface ListaInstTableViewController ()
 {
  //   NSMutableDictionary *dicSections;
+    int instSelected;
 }
 @end
 
@@ -41,6 +43,7 @@
 {
     NSMutableArray *listIns = [[NSMutableArray alloc]init];
     
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     for(int i = 0; i < _quantInst;i++)
     {
@@ -50,8 +53,18 @@
         NSString *keyAreaAtuacao = [NSString stringWithFormat:@"areaAtuacao%d",i];
         NSString *keyEndereco = [NSString stringWithFormat:@"endereco%d",i];
         NSString *keyTelefone = [NSString stringWithFormat:@"telefone%d",i];
+        NSString *keyEmail = [NSString stringWithFormat:@"email%d",i];
+        NSString *keySite = [NSString stringWithFormat:@"site%d",i];
+        NSString *keyBairro = [NSString stringWithFormat:@"bairro%d",i];
+        NSString *keyCidade = [NSString stringWithFormat:@"cidade%d",i];
+        NSString *keyUf = [NSString stringWithFormat:@"uf%d",i];
+        NSString *keyBrevePerfil = [NSString stringWithFormat:@"brevePerfil%d",i];
+        NSString *keyMissao = [NSString stringWithFormat:@"missao%d",i];
+        NSString *keyPrincipaisParceiros = [NSString stringWithFormat:@"principaisParceiros%d",i];
+        NSString *keyProjeto = [NSString stringWithFormat:@"projeto%d",i];
+        NSString *keyComoAjudar = [NSString stringWithFormat:@"comoAjdar%d",i];
         
-        NSString *nomeImagem = @"logo2.png";
+        NSString *nomeImagem = [NSString stringWithFormat:@"image%dinst%d.jpeg",i+1,i+1];
         UIImage *imagemArq1 = [UIImage imageNamed:nomeImagem];
         
         inst.imagem = imagemArq1;
@@ -60,7 +73,29 @@
         inst.areaAtuacao = [defaults objectForKey:keyAreaAtuacao];
         inst.endereco = [defaults objectForKey:keyEndereco];
         inst.telefone = [defaults objectForKey:keyTelefone];
+        inst.email = [defaults objectForKey:keyEmail];
+        inst.site = [defaults objectForKey:keySite];
+        inst.bairro = [defaults objectForKey:keyBairro];
+        inst.cidade = [defaults objectForKey:keyCidade];
+        inst.uf = [defaults objectForKey:keyUf];
+        inst.brevePerfil = [defaults objectForKey:keyBrevePerfil];
+        inst.missao = [defaults objectForKey:keyMissao];
+        inst.principaisParceiros = [defaults objectForKey:keyPrincipaisParceiros];
+        inst.projeto = [defaults objectForKey:keyProjeto];
+        inst.comoAjudar = [defaults objectForKey:keyComoAjudar];
         
+        NSMutableArray *arrayImage = [[NSMutableArray alloc]init];
+//        arrayImage = [[NSMutableArray alloc]init];
+        
+        for(int j = 1; j <= 5;j++){
+            NSString *imgName = [NSString stringWithFormat:@"image%dinst%d.jpeg",j,i+1];
+//            UIImageView *image1 = [[UIImageView alloc]init];
+//            image1.image = [UIImage imageNamed:imgName];
+            [arrayImage addObject:imgName];
+//            [inst.listaImagens addObject:imgName];
+        }
+        
+        inst.listaImagens = arrayImage;
         [listIns addObject:inst];
     }
     
@@ -127,7 +162,7 @@
     [labelEnderecoInst setText:[_listaInstituicoesReceiv[indexPath.row]endereco]];
 
     
-    NSLog(@"TELEFONE: %@",[_listaInstituicoesReceiv[indexPath.row]telefone]);
+//    NSLog(@"TELEFONE: %@",[_listaInstituicoesReceiv[indexPath.row]telefone]);
     
     
     UIButton *botaoTelefone = (UIButton *)[cell viewWithTag:4];
@@ -136,8 +171,8 @@
     
     [botaoTelefone setTitle:labelButton.text forState:UIControlStateNormal];
     
-    NSLog(@"TAG: %ld",botaoTelefone.titleLabel.tag);
-    NSLog(@"TEXTO: %@",botaoTelefone.titleLabel.text);
+//    NSLog(@"TAG: %ld",botaoTelefone.titleLabel.tag);
+//    NSLog(@"TEXTO: %@",botaoTelefone.titleLabel.text);
     cell.tag = indexPath.row;
     
     return cell;
@@ -153,10 +188,23 @@
 //    return dicSections.allKeys[section];
 //}
 
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    instSelected = indexPath.row;
+    return indexPath;
+}
 
 
-
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"gotoDetalheInstituicao"])
+    {
+        DetalheInstituicaoTableViewController *detalheInst = (DetalheInstituicaoTableViewController *)segue.destinationViewController;
+        
+        [detalheInst.navigationItem setTitle:[_listaInstituicoesReceiv[instSelected]nome]];
+        detalheInst.instituicao = _listaInstituicoesReceiv[instSelected];
+    }
+}
 
 
 

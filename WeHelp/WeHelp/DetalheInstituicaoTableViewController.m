@@ -14,7 +14,7 @@
 
 @implementation DetalheInstituicaoTableViewController
 {
-    NSArray *arrayImage;
+    NSMutableArray *arrayImage;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -28,13 +28,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    arrayImage = [[NSArray alloc]init];
-    UIImage *image1 = [UIImage imageNamed:@"beira1.jpg"];
-    UIImage *image2 = [UIImage imageNamed:@"beira2.jpg"];
+    arrayImage = [[NSMutableArray alloc]init];
+    UIImage *image1 = [UIImage imageNamed:self.instituicao.listaImagens[0]];
+    UIImage *image2 = [UIImage imageNamed:self.instituicao.listaImagens[1]];
+    UIImage *image3 = [UIImage imageNamed:self.instituicao.listaImagens[2]];
+    UIImage *image4 = [UIImage imageNamed:self.instituicao.listaImagens[3]];
+    UIImage *image5 = [UIImage imageNamed:self.instituicao.listaImagens[4]];
     
-    arrayImage = @[image1, image2];
+//
     
+    NSLog(@"TOTAL IMAGENS: %ld",self.instituicao.listaImagens.count);
+    for (int i = 0 ; i < self.instituicao.listaImagens.count; i++)
+    {
+        
+//        UIImage *image = [UIImage imageNamed:[self.instituicao.listaImagens objectAtIndex:i]];
+//        image = [self.instituicao.listaImagens objectAtIndex:i];
+        
+        NSLog(@"NOME IMAGEM: %@",self.instituicao.nome);
+//        [arrayImage addObject:image];
+    }
     
+    arrayImage = @[image1,image2,image3,image4,image5];
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -155,7 +169,7 @@
     UITableViewCell *cell;
     
     switch (indexPath.section){
-        case 0:{
+        case 0:{//Imagens
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection0" forIndexPath:indexPath];
             
             UIScrollView *scrImage = (UIScrollView *)[cell viewWithTag:1];
@@ -167,13 +181,16 @@
             UIImageView *imageView5 = (UIImageView *)[scrImage viewWithTag:6];
             imageView.image = arrayImage[0];
             imageView2.image = arrayImage[1];
+            imageView3.image = arrayImage[2];
+            imageView4.image = arrayImage[3];
+            imageView5.image = arrayImage[4];
             
             scrImage.contentSize = CGSizeMake((scrImage.frame.size.width+0) * arrayImage.count, scrImage.frame.size.height);
             
             break;
         
         }
-        case 1:{
+        case 1:{//Informações Gerais
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection1" forIndexPath:indexPath];
             UILabel *lblTitulo = (UILabel *)[cell viewWithTag:1];
             UILabel *lblDesc = (UILabel *)[cell viewWithTag:2];
@@ -183,101 +200,105 @@
                 case 0:{
                     lblDesc.hidden = YES;
                     lblTitulo.text = @"Site: ";
-                    [butBut setTitle:@"www.jadergay.com" forState:UIControlStateNormal];
+                    [butBut setTitle:self.instituicao.site forState:UIControlStateNormal];
                     break;
                 }
                 case 1:{
                     lblDesc.hidden = YES;
                     lblTitulo.text = @"E-mail: ";
-                    [butBut setTitle:@"jader@rosca.com" forState:UIControlStateNormal];
+                    [butBut setTitle:self.instituicao.email forState:UIControlStateNormal];
                     break;
                 }
                 case 2:{
                     lblDesc.hidden = YES;
                     lblTitulo.text = @"Telefone: ";
-                    [butBut setTitle:@"51 69696969" forState:UIControlStateNormal];
+                    [butBut setTitle:self.instituicao.telefone forState:UIControlStateNormal];
                     break;
                 }
                 case 3:{
                     butBut.hidden = YES;
                     lblTitulo.text = @"Endereço: ";
+                    [lblDesc setText:self.instituicao.endereco];
                     break;
                 }
                 case 4:{
                     butBut.hidden = YES;
                     lblTitulo.text = @"Bairro: ";
+                    [lblDesc setText:self.instituicao.bairro];
                     break;
                 }
                 case 5:{
                     butBut.hidden = YES;
                     lblTitulo.text = @"Cidade: ";
+                    [lblDesc setText:self.instituicao.cidade];
                     break;
                 }
                 case 6:{
                     butBut.hidden = YES;
                     lblTitulo.text = @"UF: ";
+                    [lblDesc setText:self.instituicao.uf];
                     break;
                 }
             }
             break;
         }
-        case 2:{
+        case 2:{//Breve Perfil
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection2" forIndexPath:indexPath];
             UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
             UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
             lblSaibaMais.text = @"Saiba mais";
             lblSaibaMais.adjustsFontSizeToFitWidth = YES;
-            lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader jader jader jader ";
+            lblTexto.text = self.instituicao.brevePerfil;
             
             break;
             
         }
-        case 3:{
+        case 3:{//Missao
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection3" forIndexPath:indexPath];
             UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
             UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
             lblSaibaMais.text = @"Saiba mais";
             lblSaibaMais.adjustsFontSizeToFitWidth = YES;
-            lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader jader jader jader ";
+            lblTexto.text = self.instituicao.missao;
             break;
         }
-        case 4:{
+        case 4:{//Area Atuacao
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection4" forIndexPath:indexPath];
             UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
             UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
             lblSaibaMais.text = @"Saiba mais";
             lblSaibaMais.adjustsFontSizeToFitWidth = YES;
-            lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader ";
+            lblTexto.text = self.instituicao.areaAtuacao;
             break;
         }
-        case 5:{
+        case 5:{//Principais Parceiros
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection5" forIndexPath:indexPath];
             UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
             UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
             lblSaibaMais.text = @"Saiba mais";
             lblSaibaMais.adjustsFontSizeToFitWidth = YES;
-            lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader ";
+            lblTexto.text = self.instituicao.principaisParceiros;
             break;
         }
-        case 6:{
+        case 6:{//Projetos
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection6" forIndexPath:indexPath];
             UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
             UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
             lblSaibaMais.text = @"Saiba mais";
             lblSaibaMais.adjustsFontSizeToFitWidth = YES;
-            lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader ";
+            lblTexto.text = self.instituicao.projeto;
             break;
         }
-        case 7:{
+        case 7:{//Como Ajudar
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection7" forIndexPath:indexPath];
             UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
             UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
             lblSaibaMais.text = @"Saiba mais";
             lblSaibaMais.adjustsFontSizeToFitWidth = YES;
-            lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader ";
+            lblTexto.text = self.instituicao.comoAjudar;
             break;
         }
-        case 8:{
+        case 8:{//Faça sua doacao em dinheiro
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection8" forIndexPath:indexPath];
             break;
         }
