@@ -39,6 +39,7 @@
     NSMutableDictionary *navBarTextAttributes = [NSMutableDictionary dictionaryWithCapacity:1];
     
     [navBarTextAttributes setObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName ];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     self.navigationController.navigationBar.titleTextAttributes = navBarTextAttributes;
     NSArray *auxList = @[@"Idosos", @"Crianças Carente", @"Crianças com Deficiencia", @"Jovens e Adultos Carentes", @"Jáder", @"Novinhas"];
@@ -78,7 +79,20 @@
     lblTitle.text = [typesOfInstitution objectAtIndex:indexPath.row];
     cell.tag = indexPath.row;
     
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    [cell setSelected:NO animated:YES];
+    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath   *)indexPath
+{
+    [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
 }
 
 /*
