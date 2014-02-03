@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		074D0B151897CCB400DFCA73 /* fundohome.png in Resources */ = {isa = PBXBuildFile; fileRef = 074D0B141897CCB400DFCA73 /* fundohome.png */; };
 		074D0B181897D75F00DFCA73 /* TypeInstitutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D0B171897D75F00DFCA73 /* TypeInstitutionViewController.m */; };
+		07ACC08E189FA7D80053134A /* fundohome 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07ACC089189FA7D80053134A /* fundohome 2.png */; };
+		07ACC08F189FA7D80053134A /* homefundocorel.png in Resources */ = {isa = PBXBuildFile; fileRef = 07ACC08A189FA7D80053134A /* homefundocorel.png */; };
+		07ACC090189FA7D80053134A /* rodape.png in Resources */ = {isa = PBXBuildFile; fileRef = 07ACC08B189FA7D80053134A /* rodape.png */; };
+		07ACC091189FA7D80053134A /* fundo botoes doacao.png in Resources */ = {isa = PBXBuildFile; fileRef = 07ACC08C189FA7D80053134A /* fundo botoes doacao.png */; };
+		07ACC092189FA7D80053134A /* separador secao detalhe.png in Resources */ = {isa = PBXBuildFile; fileRef = 07ACC08D189FA7D80053134A /* separador secao detalhe.png */; };
 		07C3A8A71896937D00326A26 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C3A8A51896937D00326A26 /* logo2.png */; };
 		07C3A8A81896937D00326A26 /* separador.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C3A8A61896937D00326A26 /* separador.png */; };
 		7C0EFE6318967F6800ABF698 /* Instituicao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EFE6218967F6800ABF698 /* Instituicao.m */; };
@@ -44,6 +49,11 @@
 		074D0B141897CCB400DFCA73 /* fundohome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fundohome.png; path = ../../../../../Desktop/fundohome.png; sourceTree = "<group>"; };
 		074D0B161897D75F00DFCA73 /* TypeInstitutionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeInstitutionViewController.h; sourceTree = "<group>"; };
 		074D0B171897D75F00DFCA73 /* TypeInstitutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeInstitutionViewController.m; sourceTree = "<group>"; };
+		07ACC089189FA7D80053134A /* fundohome 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fundohome 2.png"; path = "../../../../../Desktop/fundohome 2.png"; sourceTree = "<group>"; };
+		07ACC08A189FA7D80053134A /* homefundocorel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homefundocorel.png; path = ../../../../../Desktop/homefundocorel.png; sourceTree = "<group>"; };
+		07ACC08B189FA7D80053134A /* rodape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rodape.png; path = ../../../../../Desktop/rodape.png; sourceTree = "<group>"; };
+		07ACC08C189FA7D80053134A /* fundo botoes doacao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fundo botoes doacao.png"; path = "../../../../../Desktop/fundo botoes doacao.png"; sourceTree = "<group>"; };
+		07ACC08D189FA7D80053134A /* separador secao detalhe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "separador secao detalhe.png"; path = "../../../../../Desktop/separador secao detalhe.png"; sourceTree = "<group>"; };
 		07C3A8A51896937D00326A26 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = ../../../../../Desktop/logo2.png; sourceTree = "<group>"; };
 		07C3A8A61896937D00326A26 /* separador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = separador.png; path = ../../../../../Desktop/separador.png; sourceTree = "<group>"; };
 		7C0EFE6118967F6800ABF698 /* Instituicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instituicao.h; sourceTree = "<group>"; };
@@ -116,6 +126,11 @@
 			isa = PBXGroup;
 			children = (
 				07C3A8A51896937D00326A26 /* logo2.png */,
+				07ACC089189FA7D80053134A /* fundohome 2.png */,
+				07ACC08A189FA7D80053134A /* homefundocorel.png */,
+				07ACC08B189FA7D80053134A /* rodape.png */,
+				07ACC08C189FA7D80053134A /* fundo botoes doacao.png */,
+				07ACC08D189FA7D80053134A /* separador secao detalhe.png */,
 				074D0B141897CCB400DFCA73 /* fundohome.png */,
 				07C3A8A61896937D00326A26 /* separador.png */,
 			);
@@ -304,11 +319,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				074D0B151897CCB400DFCA73 /* fundohome.png in Resources */,
+				07ACC08E189FA7D80053134A /* fundohome 2.png in Resources */,
+				07ACC091189FA7D80053134A /* fundo botoes doacao.png in Resources */,
 				E42A693A18928D2500AE8136 /* Main_iPad.storyboard in Resources */,
 				07C3A8A71896937D00326A26 /* logo2.png in Resources */,
+				07ACC092189FA7D80053134A /* separador secao detalhe.png in Resources */,
 				E42A693F18928D2500AE8136 /* Images.xcassets in Resources */,
 				07C3A8A81896937D00326A26 /* separador.png in Resources */,
+				07ACC090189FA7D80053134A /* rodape.png in Resources */,
 				E42A693718928D2500AE8136 /* Main_iPhone.storyboard in Resources */,
+				07ACC08F189FA7D80053134A /* homefundocorel.png in Resources */,
 				E42A692E18928D2500AE8136 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
