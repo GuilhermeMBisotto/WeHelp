@@ -31,6 +31,10 @@
     [super viewDidLoad];
     
 //    dicSections = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *navBarTextAttributes = [NSMutableDictionary dictionaryWithCapacity:1];
+    [navBarTextAttributes setObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName ];
+    self.navigationController.navigationBar.titleTextAttributes = navBarTextAttributes;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
 }
 

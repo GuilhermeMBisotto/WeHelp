@@ -36,7 +36,11 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSMutableDictionary *navBarTextAttributes = [NSMutableDictionary dictionaryWithCapacity:1];
     
+    [navBarTextAttributes setObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName ];
+    
+    self.navigationController.navigationBar.titleTextAttributes = navBarTextAttributes;
     NSArray *auxList = @[@"Idosos", @"Crianças Carente", @"Crianças com Deficiencia", @"Jovens e Adultos Carentes", @"Jáder", @"Novinhas"];
     
     typesOfInstitution = auxList;
