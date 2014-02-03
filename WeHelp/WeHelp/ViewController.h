@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
+@interface ViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate,UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *campoBusca;
 @property NSMutableArray *listaInstituicao;
+-(BOOL)textFieldShouldReturn:(UITextField *)textField;
 @end

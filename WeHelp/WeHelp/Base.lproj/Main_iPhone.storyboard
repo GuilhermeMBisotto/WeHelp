@@ -111,6 +111,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="e4T-wc-rwj"/>
                     <connections>
+                        <outlet property="campoBusca" destination="Nwc-XR-HjT" id="xg0-Co-65e"/>
                         <outlet property="searchDisplayController" destination="Qmq-0T-ea9" id="l1C-yy-iU6"/>
                     </connections>
                 </viewController>
@@ -559,10 +560,10 @@
             </objects>
             <point key="canvasLocation" x="-790" y="728"/>
         </scene>
-        <!--View Controller-->
+        <!--Cadastro View Controller-->
         <scene sceneID="b2j-Hx-FoA">
             <objects>
-                <viewController id="k0f-dF-Hzj" sceneMemberID="viewController">
+                <viewController id="k0f-dF-Hzj" customClass="CadastroViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KZV-Ia-gyU"/>
                         <viewControllerLayoutGuide type="bottom" id="3Z0-FB-3QH"/>
@@ -610,10 +611,10 @@
             </objects>
             <point key="canvasLocation" x="603" y="1751"/>
         </scene>
-        <!--View Controller-->
+        <!--Informacoes View Controller-->
         <scene sceneID="VCA-Vd-4Ce">
             <objects>
-                <viewController id="COh-Nv-HSK" sceneMemberID="viewController">
+                <viewController id="COh-Nv-HSK" customClass="InformacoesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pa2-4X-O7z"/>
                         <viewControllerLayoutGuide type="bottom" id="dXR-Gk-Tes"/>

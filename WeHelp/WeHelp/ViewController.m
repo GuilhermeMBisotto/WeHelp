@@ -15,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *oi;
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
+
+
 @property int quantInst;
 @end
 
@@ -32,6 +34,8 @@
     self.navigationController.navigationBar.barTintColor = navColor;
     _listaInstituicao = [[NSMutableArray alloc]init];
     [self CriaInstituicoes];
+    
+    [_campoBusca setDelegate:self];
     
     NSMutableDictionary *navBarTextAttributes = [NSMutableDictionary dictionaryWithCapacity:1];
     
@@ -71,6 +75,11 @@
     }
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.campoBusca resignFirstResponder];
+    return YES;
+}
 
 - (void)didReceiveMemoryWarning
 {

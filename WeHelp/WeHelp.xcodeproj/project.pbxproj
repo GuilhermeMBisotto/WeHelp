@@ -34,6 +34,8 @@
 		7C747DA5189FBC3B00995FA4 /* rodape.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C747D8E189FBC3B00995FA4 /* rodape.png */; };
 		7C747DA6189FBC3B00995FA4 /* separador.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C747D8F189FBC3B00995FA4 /* separador.png */; };
 		7C747DA7189FBC3B00995FA4 /* separador secao detalhe.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C747D90189FBC3B00995FA4 /* separador secao detalhe.png */; };
+		7C747DAA189FBF9A00995FA4 /* InformacoesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C747DA9189FBF9A00995FA4 /* InformacoesViewController.m */; };
+		7C747DAD189FBFAC00995FA4 /* CadastroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C747DAC189FBFAC00995FA4 /* CadastroViewController.m */; };
 		E42A692418928D2500AE8136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692318928D2500AE8136 /* Foundation.framework */; };
 		E42A692618928D2500AE8136 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692518928D2500AE8136 /* CoreGraphics.framework */; };
 		E42A692818928D2500AE8136 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42A692718928D2500AE8136 /* UIKit.framework */; };
@@ -93,6 +95,10 @@
 		7C747D8E189FBC3B00995FA4 /* rodape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rodape.png; path = ../../../../Desktop/ImagensWeHelp/rodape.png; sourceTree = "<group>"; };
 		7C747D8F189FBC3B00995FA4 /* separador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = separador.png; path = ../../../../Desktop/ImagensWeHelp/separador.png; sourceTree = "<group>"; };
 		7C747D90189FBC3B00995FA4 /* separador secao detalhe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "separador secao detalhe.png"; path = "../../../../Desktop/ImagensWeHelp/separador secao detalhe.png"; sourceTree = "<group>"; };
+		7C747DA8189FBF9A00995FA4 /* InformacoesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformacoesViewController.h; sourceTree = "<group>"; };
+		7C747DA9189FBF9A00995FA4 /* InformacoesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformacoesViewController.m; sourceTree = "<group>"; };
+		7C747DAB189FBFAC00995FA4 /* CadastroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastroViewController.h; sourceTree = "<group>"; };
+		7C747DAC189FBFAC00995FA4 /* CadastroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CadastroViewController.m; sourceTree = "<group>"; };
 		E42A692018928D2500AE8136 /* WeHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42A692318928D2500AE8136 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E42A692518928D2500AE8136 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -252,6 +258,10 @@
 				E42A693218928D2500AE8136 /* AppDelegate.h */,
 				E42A693318928D2500AE8136 /* AppDelegate.m */,
 				E42A693518928D2500AE8136 /* Main_iPhone.storyboard */,
+				7C747DA8189FBF9A00995FA4 /* InformacoesViewController.h */,
+				7C747DA9189FBF9A00995FA4 /* InformacoesViewController.m */,
+				7C747DAB189FBFAC00995FA4 /* CadastroViewController.h */,
+				7C747DAC189FBFAC00995FA4 /* CadastroViewController.m */,
 				E42A693818928D2500AE8136 /* Main_iPad.storyboard */,
 				7C747CF418991FF300995FA4 /* DetalheInstituicaoTableViewController.h */,
 				7C747CF518991FF300995FA4 /* DetalheInstituicaoTableViewController.m */,
@@ -416,9 +426,11 @@
 				7C0EFE6318967F6800ABF698 /* Instituicao.m in Sources */,
 				074D0B181897D75F00DFCA73 /* TypeInstitutionViewController.m in Sources */,
 				E42A693D18928D2500AE8136 /* ViewController.m in Sources */,
+				7C747DAA189FBF9A00995FA4 /* InformacoesViewController.m in Sources */,
 				E42A693418928D2500AE8136 /* AppDelegate.m in Sources */,
 				7C0EFE681896802100ABF698 /* ListaInstTableViewController.m in Sources */,
 				E42A693018928D2500AE8136 /* main.m in Sources */,
+				7C747DAD189FBFAC00995FA4 /* CadastroViewController.m in Sources */,
 				7C747CF618991FF300995FA4 /* DetalheInstituicaoTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
