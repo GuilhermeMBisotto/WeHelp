@@ -102,6 +102,9 @@
                                     <color key="titleColor" red="0.76596084090000005" green="0.777016967" blue="0.79051737879999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.76596084090000005" green="0.777016967" blue="0.79051737879999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="COh-Nv-HSK" kind="push" identifier="gotoInformacoes" id="v2Z-h8-fEH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -121,7 +124,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-27" y="-100"/>
+            <point key="canvasLocation" x="-187" y="728"/>
         </scene>
         <!--Type Institution View Controller-->
         <scene sceneID="ElN-AT-kSv">
@@ -227,7 +230,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N10-e2-hUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-27" y="591"/>
+            <point key="canvasLocation" x="603" y="1059"/>
         </scene>
         <!--Detalhe Instituicao Table View Controller-->
         <scene sceneID="XRN-Yg-50X">
@@ -460,7 +463,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTB-CT-WYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1161" y="-100"/>
+            <point key="canvasLocation" x="1185" y="-286"/>
         </scene>
         <!--Lista Inst Table View Controller - Instituições-->
         <scene sceneID="RCZ-Y5-Ipi">
@@ -536,7 +539,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lx9-Fc-Eag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="607" y="-100"/>
+            <point key="canvasLocation" x="603" y="-286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bXb-bG-0gX">
@@ -554,7 +557,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22e-iX-M0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-518" y="-100"/>
+            <point key="canvasLocation" x="-790" y="728"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="b2j-Hx-FoA">
@@ -605,7 +608,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39c-g4-2cd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-527" y="641"/>
+            <point key="canvasLocation" x="603" y="1751"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VCA-Vd-4Ce">
+            <objects>
+                <viewController id="COh-Nv-HSK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pa2-4X-O7z"/>
+                        <viewControllerLayoutGuide type="bottom" id="dXR-Gk-Tes"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="puE-BL-iBe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="5kQ-g3-XJM">
+                                <rect key="frame" x="13" y="72" width="294" height="302"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="daj-Wm-8zt">
+                                <rect key="frame" x="20" y="332" width="280" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">A equipe BEPiD não lucra em sobre as doações bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgE-6M-IVs">
+                                <rect key="frame" x="0.0" y="513" width="329" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.66666666669999997" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Ajude a equipe BEPiD">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="stK-ad-rpb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tD2-ZR-H8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603" y="381"/>
         </scene>
     </scenes>
     <resources>
