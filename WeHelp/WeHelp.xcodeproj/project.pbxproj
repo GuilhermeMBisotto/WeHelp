@@ -162,6 +162,23 @@
 		07C3A8A91896939400326A26 /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				7C747D161899332000995FA4 /* image1inst1.jpeg */,
+				7C747D171899332000995FA4 /* image1inst2.jpeg */,
+				7C747D181899332000995FA4 /* image1inst3.jpeg */,
+				7C747D191899332000995FA4 /* image2inst1.jpeg */,
+				7C747D1A1899332000995FA4 /* image2inst2.jpeg */,
+				7C747D1B1899332000995FA4 /* image2inst3.jpeg */,
+				7C747D1C1899332000995FA4 /* image3inst1.jpeg */,
+				7C747D1D1899332000995FA4 /* image3inst2.jpeg */,
+				7C747D1E1899332000995FA4 /* image3inst3.jpeg */,
+				7C747D1F1899332000995FA4 /* image4inst1.jpeg */,
+				7C747D021899323600995FA4 /* image4inst2.jpeg */,
+				7C747D031899323600995FA4 /* image4inst3.jpeg */,
+				7C747D201899332000995FA4 /* image5inst1.jpeg */,
+				7C747D211899332000995FA4 /* image5inst2.jpeg */,
+				7C747D221899332000995FA4 /* image5inst3.jpeg */,
+				7C0EFE6E1897CEA800ABF698 /* logo2.png */,
+				7C0EFE6F1897CEA800ABF698 /* separador.png */,
 				07C3A8A51896937D00326A26 /* logo2.png */,
 				07ACC089189FA7D80053134A /* fundohome 2.png */,
 				07ACC08A189FA7D80053134A /* homefundocorel.png */,

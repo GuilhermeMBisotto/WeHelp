@@ -30,6 +30,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     UIColor *navColor = [UIColor colorWithRed:((14) / 255.0) green:((170) / 255.0) blue:((237) / 255.0) alpha:1.0];
     self.navigationController.navigationBar.barTintColor = navColor;
+    _listaInstituicao = [[NSMutableArray alloc]init];
+    [self CriaInstituicoes];
     
     NSMutableDictionary *navBarTextAttributes = [NSMutableDictionary dictionaryWithCapacity:1];
     
