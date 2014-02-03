@@ -15,5 +15,16 @@
 @property NSString *areaAtuacao;
 @property NSString *endereco;
 @property NSString *telefone;
+@property NSString *email;
+@property NSString *site;
+@property NSString *bairro;
+@property NSString *cidade;
+@property NSString *uf;
+@property NSString *brevePerfil;
+@property NSString *missao;
+@property NSString *principaisParceiros;
+@property NSString *projeto;
+@property NSString *comoAjudar;
+@property NSMutableArray *listaImagens;
 
 @end
