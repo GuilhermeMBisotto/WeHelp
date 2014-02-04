@@ -38,6 +38,18 @@
     
 //
     
+    NSLog(@"TOTAL IMAGENS: %ld",self.instituicao.listaImagens.count);
+    for (int i = 0 ; i < self.instituicao.listaImagens.count; i++)
+    {
+        
+//        UIImage *image = [UIImage imageNamed:[self.instituicao.listaImagens objectAtIndex:i]];
+//        image = [self.instituicao.listaImagens objectAtIndex:i];
+        
+        NSLog(@"NOME IMAGEM: %@",self.instituicao.nome);
+//        [arrayImage addObject:image];
+    }
+    
+    arrayImage = @[image1,image2,image3,image4,image5];
 }
 
 - (void) viewDidAppear:(BOOL)animated {
