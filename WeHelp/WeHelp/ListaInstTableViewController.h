@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Instituicao.h"
 @interface ListaInstTableViewController : UITableViewController
-@property Instituicao *inst;
-@property NSMutableArray *listaInst;
+@property int quantInst;
+@property NSMutableArray *listaInstituicoesReceiv;
 @end

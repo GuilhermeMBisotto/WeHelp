@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Instituicao.h"
 @interface DetalheInstituicaoTableViewController : UITableViewController <UIScrollViewDelegate>
-
+@property Instituicao *instituicao;
 @end
