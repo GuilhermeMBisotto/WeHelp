@@ -15,6 +15,7 @@
 @implementation DetalheInstituicaoTableViewController
 {
     NSArray *arrayImage;
+    NSInteger pageNumber;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -34,7 +35,6 @@
     
     arrayImage = @[image1, image2];
     
-    
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -43,16 +43,9 @@
     [self.tableView reloadData];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
-#pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 9;
+    return 10;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -60,7 +53,6 @@
     switch (section){
         case 0:{
             return @"Detalhes";
-            //self.tableView.indexPathForSelectedRow.section
             break;
         }
         case 1:{
@@ -135,7 +127,11 @@
             break;
         }
         case 8:{
-            return 2;
+            return 1;
+            break;
+        }
+        case 9:{
+            return 1;
             break;
         }
     } return 0;
@@ -145,8 +141,13 @@
 {
     if (indexPath.section==0) {
         return 249;
-    } else {
-        return tableView.rowHeight;
+    } else if (indexPath.section == 8){
+            return 150;
+    } else if (indexPath.section == 9){
+        return 55;
+    }
+    else {
+        return 45;
     }
 }
 
@@ -158,26 +159,41 @@
         case 0:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection0" forIndexPath:indexPath];
             
-            UIScrollView *scrImage = (UIScrollView *)[cell viewWithTag:1];
+            UIScrollView *scrImage = (UIScrollView *)[cell viewWithTag:01];
+            scrImage.contentSize = CGSizeMake((scrImage.frame.size.width) * arrayImage.count, scrImage.frame.size.height);
             
-            UIImageView *imageView = (UIImageView *)[scrImage viewWithTag:2];
-            UIImageView *imageView2 = (UIImageView *)[scrImage viewWithTag:3];
-            UIImageView *imageView3 = (UIImageView *)[scrImage viewWithTag:4];
-            UIImageView *imageView4 = (UIImageView *)[scrImage viewWithTag:5];
-            UIImageView *imageView5 = (UIImageView *)[scrImage viewWithTag:6];
+            pageNumber = round(scrImage.contentOffset.x / scrImage.frame.size.width);
+
+            UIImageView * esquerda = (UIImageView *)[cell viewWithTag:8];
+            UIImageView * direita = (UIImageView *)[cell viewWithTag:7];
+            
+            if (round(scrImage.contentOffset.x / scrImage.frame.size.width) == 0){
+                esquerda.hidden = YES;
+            }
+            else
+                esquerda.hidden = NO;
+            
+            if (round(scrImage.contentOffset.x / scrImage.frame.size.width) == 4) {
+                direita.hidden = YES;
+            }
+            else
+                direita.hidden = NO;
+            
+            UIImageView *imageView = (UIImageView *)[scrImage viewWithTag:02];
+            UIImageView *imageView2 = (UIImageView *)[scrImage viewWithTag:03];
+            UIImageView *imageView3 = (UIImageView *)[scrImage viewWithTag:04];
+            UIImageView *imageView4 = (UIImageView *)[scrImage viewWithTag:05];
+            UIImageView *imageView5 = (UIImageView *)[scrImage viewWithTag:06];
             imageView.image = arrayImage[0];
             imageView2.image = arrayImage[1];
             
-            scrImage.contentSize = CGSizeMake((scrImage.frame.size.width+0) * arrayImage.count, scrImage.frame.size.height);
-            
             break;
-        
         }
         case 1:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection1" forIndexPath:indexPath];
-            UILabel *lblTitulo = (UILabel *)[cell viewWithTag:1];
-            UILabel *lblDesc = (UILabel *)[cell viewWithTag:2];
-            UIButton *butBut = (UIButton *)[cell viewWithTag:3];
+            UILabel *lblTitulo = (UILabel *)[cell viewWithTag:11];
+            UILabel *lblDesc = (UILabel *)[cell viewWithTag:12];
+            UIButton *butBut = (UIButton *)[cell viewWithTag:13];
             
             switch (indexPath.row){
                 case 0:{
@@ -223,8 +239,8 @@
         }
         case 2:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection2" forIndexPath:indexPath];
-            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
-            UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
+            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:21];
+            UILabel *lblTexto = (UILabel *)[cell viewWithTag:22];
             lblSaibaMais.text = @"Saiba mais";
             lblSaibaMais.adjustsFontSizeToFitWidth = YES;
             lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader jader jader jader ";
@@ -234,8 +250,8 @@
         }
         case 3:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection3" forIndexPath:indexPath];
-            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
-            UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
+            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:31];
+            UILabel *lblTexto = (UILabel *)[cell viewWithTag:32];
             lblSaibaMais.text = @"Saiba mais";
             lblSaibaMais.adjustsFontSizeToFitWidth = YES;
             lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader jader jader jader ";
@@ -243,8 +259,8 @@
         }
         case 4:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection4" forIndexPath:indexPath];
-            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
-            UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
+            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:41];
+            UILabel *lblTexto = (UILabel *)[cell viewWithTag:42];
             lblSaibaMais.text = @"Saiba mais";
             lblSaibaMais.adjustsFontSizeToFitWidth = YES;
             lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader ";
@@ -252,8 +268,8 @@
         }
         case 5:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection5" forIndexPath:indexPath];
-            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
-            UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
+            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:51];
+            UILabel *lblTexto = (UILabel *)[cell viewWithTag:52];
             lblSaibaMais.text = @"Saiba mais";
             lblSaibaMais.adjustsFontSizeToFitWidth = YES;
             lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader ";
@@ -261,8 +277,8 @@
         }
         case 6:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection6" forIndexPath:indexPath];
-            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
-            UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
+            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:61];
+            UILabel *lblTexto = (UILabel *)[cell viewWithTag:62];
             lblSaibaMais.text = @"Saiba mais";
             lblSaibaMais.adjustsFontSizeToFitWidth = YES;
             lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader ";
@@ -270,8 +286,8 @@
         }
         case 7:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection7" forIndexPath:indexPath];
-            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:1];
-            UILabel *lblTexto = (UILabel *)[cell viewWithTag:2];
+            UILabel *lblSaibaMais = (UILabel *)[cell viewWithTag:71];
+            UILabel *lblTexto = (UILabel *)[cell viewWithTag:72];
             lblSaibaMais.text = @"Saiba mais";
             lblSaibaMais.adjustsFontSizeToFitWidth = YES;
             lblTexto.text = @"jader jader jader jader jader jader jader jader jader jader jader jader ";
@@ -281,10 +297,12 @@
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection8" forIndexPath:indexPath];
             break;
         }
-            
-            
+        case 9:{
+            cell = [tableView dequeueReusableCellWithIdentifier:@"CellSection9" forIndexPath:indexPath];
+            break;
+
+        }
     }
-    
     return cell;
 }
 
@@ -338,5 +356,15 @@
  // Pass the selected object to the new view controller.
  }
  */
+
+#pragma mark Scroll View Delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView.tag == 01)
+    {
+        pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width);
+    }
+}
 
 @end

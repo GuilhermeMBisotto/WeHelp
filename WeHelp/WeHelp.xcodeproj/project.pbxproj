@@ -29,6 +29,10 @@
 		E4EFDF07189692F400CC03F8 /* DetalheInstituicaoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EFDF06189692F400CC03F8 /* DetalheInstituicaoTableViewController.m */; };
 		E4EFDF0A189693B900CC03F8 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EFDF08189693B900CC03F8 /* logo2.png */; };
 		E4EFDF0B189693B900CC03F8 /* separador.png in Resources */ = {isa = PBXBuildFile; fileRef = E4EFDF09189693B900CC03F8 /* separador.png */; };
+		E4F5E9B8189FAEDA007F8F14 /* fundobotdoa.png in Resources */ = {isa = PBXBuildFile; fileRef = E4F5E9B7189FAEDA007F8F14 /* fundobotdoa.png */; };
+		E4F5E9BA189FC3F1007F8F14 /* rodape.png in Resources */ = {isa = PBXBuildFile; fileRef = E4F5E9B9189FC3F1007F8F14 /* rodape.png */; };
+		E4FEB1CC18A10FBB00457379 /* paypal_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E4FEB1CA18A10FBB00457379 /* paypal_logo.png */; };
+		E4FEB1CD18A10FBB00457379 /* pagseguro_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E4FEB1CB18A10FBB00457379 /* pagseguro_logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		E4EFDF06189692F400CC03F8 /* DetalheInstituicaoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheInstituicaoTableViewController.m; sourceTree = "<group>"; };
 		E4EFDF08189693B900CC03F8 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = ../logo2.png; sourceTree = "<group>"; };
 		E4EFDF09189693B900CC03F8 /* separador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = separador.png; path = ../separador.png; sourceTree = "<group>"; };
+		E4F5E9B7189FAEDA007F8F14 /* fundobotdoa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fundobotdoa.png; sourceTree = "<group>"; };
+		E4F5E9B9189FC3F1007F8F14 /* rodape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rodape.png; sourceTree = "<group>"; };
+		E4FEB1CA18A10FBB00457379 /* paypal_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paypal_logo.png; sourceTree = "<group>"; };
+		E4FEB1CB18A10FBB00457379 /* pagseguro_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pagseguro_logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +179,12 @@
 				E42A693318928D2500AE8136 /* AppDelegate.m */,
 				E4EFDF08189693B900CC03F8 /* logo2.png */,
 				E46D6BD81897CD2A00739D1D /* beira1.jpg */,
+				E4FEB1CA18A10FBB00457379 /* paypal_logo.png */,
+				E4FEB1CB18A10FBB00457379 /* pagseguro_logo.png */,
 				E46D6BD91897CD2A00739D1D /* beira2.jpg */,
+				E4F5E9B7189FAEDA007F8F14 /* fundobotdoa.png */,
 				E4EFDF09189693B900CC03F8 /* separador.png */,
+				E4F5E9B9189FC3F1007F8F14 /* rodape.png */,
 				E42A693518928D2500AE8136 /* Main_iPhone.storyboard */,
 				E4EFDF05189692F400CC03F8 /* DetalheInstituicaoTableViewController.h */,
 				E4EFDF06189692F400CC03F8 /* DetalheInstituicaoTableViewController.m */,
@@ -290,13 +302,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FEB1CC18A10FBB00457379 /* paypal_logo.png in Resources */,
 				E42A693A18928D2500AE8136 /* Main_iPad.storyboard in Resources */,
 				E4EFDF0B189693B900CC03F8 /* separador.png in Resources */,
 				E42A693F18928D2500AE8136 /* Images.xcassets in Resources */,
 				E4EFDF0A189693B900CC03F8 /* logo2.png in Resources */,
 				E42A693718928D2500AE8136 /* Main_iPhone.storyboard in Resources */,
+				E4F5E9B8189FAEDA007F8F14 /* fundobotdoa.png in Resources */,
+				E4F5E9BA189FC3F1007F8F14 /* rodape.png in Resources */,
 				E46D6BDA1897CD2A00739D1D /* beira1.jpg in Resources */,
 				E46D6BDB1897CD2A00739D1D /* beira2.jpg in Resources */,
+				E4FEB1CD18A10FBB00457379 /* pagseguro_logo.png in Resources */,
 				E42A692E18928D2500AE8136 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
