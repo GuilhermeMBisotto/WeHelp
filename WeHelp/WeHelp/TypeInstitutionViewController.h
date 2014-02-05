@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TypeInstitutionViewController : UITableViewController
-
+@property NSMutableArray *arrayTypes;
 @end

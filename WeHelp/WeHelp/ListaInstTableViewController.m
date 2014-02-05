@@ -38,6 +38,11 @@
     
 }
 
+-(IBAction)voltadenovo:(UIStoryboardSegue *)sender
+{
+    
+}
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [self CarregaInstituicoes];
