@@ -7,7 +7,7 @@
 //
 
 #import "ListaInstTableViewController.h"
-#import "DetalheInstituicaoTableViewController.h"
+#import "DetalheInstituicaoViewController.h"
 @interface ListaInstTableViewController ()
 {
  //   NSMutableDictionary *dicSections;
@@ -203,9 +203,9 @@
 {
     if([[segue identifier] isEqualToString:@"gotoDetalheInstituicao"])
     {
-        DetalheInstituicaoTableViewController *detalheInst = (DetalheInstituicaoTableViewController *)segue.destinationViewController;
+        DetalheInstituicaoViewController *detalheInst = (DetalheInstituicaoViewController *)segue.destinationViewController;
         
-        [detalheInst.navigationItem setTitle:[_listaInstituicoesReceiv[instSelected]nome]];
+//        [detalheInst.navigationItem setTitle:[_listaInstituicoesReceiv[instSelected]nome]];
         detalheInst.instituicao = _listaInstituicoesReceiv[instSelected];
     }
 }
