@@ -10,6 +10,7 @@
 #import "Instituicao.h"
 #import "ListaInstTableViewController.h"
 #import "TypeInstitutionViewController.h"
+#import "LocalizationTableViewController.h"
 
 #define Rgb2UIColor(r, g, b)[UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
 
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *oi;
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
 @property NSMutableArray *listTypes;
+@property NSMutableArray *localizations;
 
 @property int quantInst;
 @end
@@ -46,6 +48,7 @@
     self.navigationController.navigationBar.titleTextAttributes = navBarTextAttributes;
     
     _listTypes = [[NSMutableArray alloc] init];
+    _localizations = [[NSMutableArray alloc] init];
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -82,6 +85,11 @@
         TypeInstitutionViewController *tiVC = (TypeInstitutionViewController *)segue.destinationViewController;
         tiVC.arrayTypes = self.listTypes;
     }
+    else if([[segue identifier] isEqualToString:@"gotoLocalization"])
+    {
+        LocalizationTableViewController *ltVC = (LocalizationTableViewController *)segue.destinationViewController;
+        ltVC.arrayLocalizations = self.localizations;
+    }
 }
 
 -(IBAction)backFromType:(UIStoryboardSegue *)segue
@@ -89,7 +97,6 @@
     TypeInstitutionViewController *tiVC = (TypeInstitutionViewController *)segue.sourceViewController;
     self.listTypes = tiVC.arrayTypes;
     
-    NSLog(@"count %lu", (unsigned long)tiVC.arrayTypes.count);
     
     UILabel *lbType = (UILabel*)[self.view viewWithTag:1200];
     
@@ -103,6 +110,26 @@
         }
     }
     [lbType setText:str];
+}
+
+-(IBAction)backFromLocalization:(UIStoryboardSegue*)segue
+{
+    LocalizationTableViewController *ltVC = (LocalizationTableViewController *)segue.sourceViewController;
+    self.localizations = ltVC.arrayLocalizations;
+    
+    
+    UILabel *lbLocalization = (UILabel*)[self.view viewWithTag:1300];
+    
+    NSString *str = [[NSString alloc]init];
+    for(int i = 0;i < ltVC.arrayLocalizations.count; i++){
+        
+        str = [str stringByAppendingString:[ltVC.arrayLocalizations objectAtIndex:i]];
+        if (i != ltVC.arrayLocalizations.count-1)
+        {
+            str = [str stringByAppendingString:@", "];
+        }
+    }
+    [lbLocalization setText:str];
 }
 
 

@@ -40,8 +40,6 @@
     self.navigationController.navigationBar.titleTextAttributes = navBarTextAttributes;
     NSArray *auxList = @[@"Idosos", @"Crianças Carente", @"Crianças com Deficiencia", @"Jovens e Adultos Carentes", @"Jáder", @"Novinhas"];
     typesOfInstitution = auxList;
-    
-    NSLog(@"%@",auxListTypes);
 }
 
 - (void)didReceiveMemoryWarning
