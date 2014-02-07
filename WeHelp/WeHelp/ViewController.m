@@ -87,6 +87,7 @@
     Instituicao *inst1 = [[Instituicao alloc]init];
     Instituicao *inst2 = [[Instituicao alloc]init];
     Instituicao *inst3 = [[Instituicao alloc]init];
+    Instituicao *inst4 = [[Instituicao alloc]init];
     
     inst1.nome = @"Insti 1";
     inst1.imagem = imagemArq1;
@@ -139,9 +140,27 @@
     inst3.comoAjudar = @"Ajudar3";
     inst3.listaImagens = @[@""];
     
+    inst4.nome = @"Jaderson Instituto";
+    inst4.imagem = imagemArq1;
+    inst4.areaAtuacao = @"Negos tripés";
+    inst4.endereco = @"Jader das Roscas, 69";
+    inst4.telefone = @"6969-6969";
+    inst4.email = @"jader@jaderson.com.br";
+    inst4.site = @"www.roscamole.com.br";
+    inst4.bairro = @"Roscanópolis";
+    inst4.cidade = @"Viamão";
+    inst4.uf = @"RS";
+    inst4.brevePerfil = @"Sou roscão e tipo mulher de amigo teu";
+    inst4.missao = @"15cm de diâmetro na rosca";
+    inst4.principaisParceiros = @"Motumbo, Nego Tripé e Kid Bengala";
+    inst4.projeto = @"É possível ser feliz com AIDS";
+    inst4.comoAjudar = @"Caso você tenha 17cm+, me ligue";
+    inst4.listaImagens = @[@""];
+    
     [_listaInstituicao addObject:inst1];
     [_listaInstituicao addObject:inst2];
     [_listaInstituicao addObject:inst3];
+    [_listaInstituicao addObject:inst4];
     
     _quantInst = _listaInstituicao.count;
     
