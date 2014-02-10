@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Instituicao.h"
 
-@interface DetalheInstituicaoV3ViewController : UIViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDataSource, UIPageViewControllerDelegate, UIPageViewControllerDataSource>
+@interface DetalheInstituicaoV3ViewController : UIViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIPageViewControllerDelegate, UIPageViewControllerDataSource>
 
 @property Instituicao *instituicao;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;

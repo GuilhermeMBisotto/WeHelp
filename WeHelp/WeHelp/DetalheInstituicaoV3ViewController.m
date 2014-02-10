@@ -7,8 +7,12 @@
 //
 
 #import "DetalheInstituicaoV3ViewController.h"
+#import "SaibaMaisViewController.h"
 
 @interface DetalheInstituicaoV3ViewController ()
+{
+    int instSelected;
+}
 
 @end
 
@@ -51,6 +55,13 @@
     
     pageControl.currentPage = 0;
     pageControl.numberOfPages = self.instituicao.listaImagens.count;
+    
+    UIView *myFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    UIImageView *imageFooter = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    imageFooter.image = [UIImage imageNamed:@"rodape"];
+    myFooterView.backgroundColor = [UIColor colorWithRed:((14) / 255.0) green:((170) / 255.0) blue:((237) / 255.0) alpha:1.0];
+    [myFooterView addSubview:imageFooter];
+    self.tableView.tableFooterView = myFooterView;
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -157,11 +168,9 @@
             cell = [self.tableView dequeueReusableCellWithIdentifier:@"CellSection0" forIndexPath:indexPath];
             UILabel *lblTitulo = (UILabel *)[cell viewWithTag:1];
             UILabel *lblDesc = (UILabel *)[cell viewWithTag:2];
-            //UIButton *butBut = (UIButton *)[cell viewWithTag:33500];
             
             switch (indexPath.row){
                 case 0:{
-                    NSLog(@"TAG: %@",self.instituicao.site);
                     lblTitulo.text = @"Site: ";
                     [lblDesc setText:self.instituicao.site];
                     lblDesc.textColor = [UIColor blueColor];
@@ -282,6 +291,92 @@
     frame.origin.y = 0;
     frame.size = self.scrollView.frame.size;
     [self.scrollView scrollRectToVisible:frame animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    switch (indexPath.section) {
+        case 1:{
+            instSelected = 1;
+            [self performSegueWithIdentifier:@"goToSaibaMaisDetalhes" sender:indexPath];
+
+            break;
+        }
+        case 2:{
+            instSelected = 2;
+            [self performSegueWithIdentifier:@"goToSaibaMaisDetalhes" sender:indexPath];
+
+            break;
+        }
+        case 3:{
+            instSelected = 3;
+            [self performSegueWithIdentifier:@"goToSaibaMaisDetalhes" sender:indexPath];
+
+            break;
+        }
+        case 4:{
+            instSelected = 4;
+            [self performSegueWithIdentifier:@"goToSaibaMaisDetalhes" sender:indexPath];
+
+            break;
+        }
+        case 5:{
+            instSelected = 5;
+            [self performSegueWithIdentifier:@"goToSaibaMaisDetalhes" sender:indexPath];
+
+            break;
+        }
+        case 6:{
+            instSelected = 6;
+            [self performSegueWithIdentifier:@"goToSaibaMaisDetalhes" sender:indexPath];
+            break;
+        }
+        case 7:{
+            return;
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"goToSaibaMaisDetalhes"])
+    {
+        SaibaMaisViewController *saibaMaisDetalhes = (SaibaMaisViewController *)segue.destinationViewController;
+        
+        [saibaMaisDetalhes.navigationItem setTitle:self.instituicao.nome];
+        switch (instSelected) {
+            case 1:{
+                saibaMaisDetalhes.strSaibaMais = self.instituicao.brevePerfil;
+                break;
+            }
+            case 2:{
+                saibaMaisDetalhes.strSaibaMais = self.instituicao.missao;
+                break;
+            }
+            case 3:{
+                saibaMaisDetalhes.strSaibaMais = self.instituicao.areaAtuacao;
+                break;
+            }
+            case 4:{
+                saibaMaisDetalhes.strSaibaMais = self.instituicao.principaisParceiros;
+                break;
+            }
+            case 5:{
+                saibaMaisDetalhes.strSaibaMais = self.instituicao.projeto;
+                break;
+            }
+            case 6:{
+                saibaMaisDetalhes.strSaibaMais = self.instituicao.comoAjudar;
+                break;
+            }
+            default:
+            break;
+        }
+    }
 }
 
 @end

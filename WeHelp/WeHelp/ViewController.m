@@ -154,7 +154,7 @@
     inst4.missao = @"15cm de diâmetro na rosca";
     inst4.principaisParceiros = @"Motumbo, Nego Tripé e Kid Bengala";
     inst4.projeto = @"É possível ser feliz com AIDS";
-    inst4.comoAjudar = @"Caso você tenha 17cm+, me ligue";
+    inst4.comoAjudar = @"Caso você tenha 17cm+, me liguehdsuahdiuashuidias diashuidhasuihiudahsuidbiuasb ubdasubduasbduahudhasuhasdhasciupsanucndsubvuhwrbvewbvhwebhwbeufbeubfdewhbfwhebfuwebfwbefbweuf";
     inst4.listaImagens = @[@""];
     
     [_listaInstituicao addObject:inst1];

@@ -250,7 +250,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellSection0" id="ogJ-8C-gzI">
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellSection0" id="ogJ-8C-gzI">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ogJ-8C-gzI" id="hmd-Fc-tL8">
@@ -421,14 +421,14 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaU-DG-0He">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button" image="paypal_logo.png">
+                                                    <state key="normal" title="Button" image="botao_paypal.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abl-Eu-Gvq">
                                                     <rect key="frame" x="0.0" y="75" width="320" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button" image="pagseguro_logo.png">
+                                                    <state key="normal" title="Button" image="botao_pagseguro.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
@@ -458,11 +458,45 @@
                         <outlet property="pageControl" destination="Xhq-qh-IBf" id="luu-qU-CEG"/>
                         <outlet property="scrollView" destination="13C-Od-n1Y" id="oxD-NK-pOD"/>
                         <outlet property="tableView" destination="4eD-6c-key" id="y8J-3N-i4B"/>
+                        <segue destination="MGS-mI-QVm" kind="push" identifier="goToSaibaMaisDetalhes" id="fwj-ej-65j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aef-5s-d56" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1089" y="-100"/>
+        </scene>
+        <!--Saiba Mais View Controller-->
+        <scene sceneID="mI1-n5-DTH">
+            <objects>
+                <viewController id="MGS-mI-QVm" customClass="SaibaMaisViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LSw-UL-xRd"/>
+                        <viewControllerLayoutGuide type="bottom" id="kZA-RW-Lr8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="59c-ln-bGf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7Q-1X-4iY">
+                                <rect key="frame" x="20" y="0.0" width="280" height="505"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rodape.png" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-QB-CPP">
+                                <rect key="frame" x="0.0" y="513" width="320" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.66666666669999997" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Oxd-mX-zh7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBp-xa-thQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537" y="-100"/>
         </scene>
         <!--Lista Inst Table View Controller - Instituições-->
         <scene sceneID="RCZ-Y5-Ipi">
@@ -560,10 +594,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="botao_pagseguro.png" width="640" height="150"/>
+        <image name="botao_paypal.png" width="640" height="150"/>
         <image name="homefundocorel.png" width="2655" height="1182"/>
         <image name="logo2.png" width="420" height="420"/>
-        <image name="pagseguro_logo.png" width="337" height="87"/>
-        <image name="paypal_logo.png" width="600" height="160"/>
+        <image name="rodape.png" width="640" height="110"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
